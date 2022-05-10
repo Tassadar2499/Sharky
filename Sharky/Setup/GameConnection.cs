@@ -24,10 +24,10 @@ namespace Sharky
 
         public void StartSC2Instance(int port)
         {
-            var processStartInfo = new ProcessStartInfo(starcraftExe);
-            processStartInfo.Arguments = String.Format("-listen {0} -port {1} -displayMode 0", address, port);
-            processStartInfo.WorkingDirectory = Path.Combine(starcraftDir, "Support64");
-            Process.Start(processStartInfo);
+            //var processStartInfo = new ProcessStartInfo(starcraftExe);
+            //processStartInfo.Arguments = String.Format("-listen {0} -port {1} -displayMode 0", address, port);
+            //processStartInfo.WorkingDirectory = Path.Combine(starcraftDir, "Support64");
+            //Process.Start(processStartInfo);
         }
 
         public async Task Connect(int port)

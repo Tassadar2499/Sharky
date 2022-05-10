@@ -22,7 +22,7 @@ namespace SharkyZergExampleBot
             var myRace = Race.Zerg;
             if (args.Length == 0)
             {
-                gameConnection.RunSinglePlayer(sharkyExampleBot, @"AutomatonLE.SC2Map", myRace, Race.Random, Difficulty.VeryHard, AIBuild.RandomBuild).Wait();
+                gameConnection.RunSinglePlayer(sharkyExampleBot, @"BlackburnAIE.SC2Map", myRace, Race.Random, Difficulty.VeryHard, AIBuild.RandomBuild).Wait();
             }
             else
             {
