@@ -2,12 +2,13 @@
 using Sharky;
 using Sharky.DefaultBot;
 using System;
+using Sharky.Setup;
 
 namespace SharkyZergExampleBot
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.WriteLine("Starting SharkyZergExampleBot");
 
@@ -19,7 +20,7 @@ namespace SharkyZergExampleBot
 
             var sharkyExampleBot = defaultSharkyBot.CreateBot(defaultSharkyBot.Managers, defaultSharkyBot.DebugService);
 
-            var myRace = Race.Zerg;
+            const Race myRace = Race.Zerg;
             if (args.Length == 0)
             {
                 gameConnection.RunSinglePlayer(sharkyExampleBot, @"BlackburnAIE.SC2Map", myRace, Race.Random, Difficulty.VeryHard, AIBuild.RandomBuild).Wait();

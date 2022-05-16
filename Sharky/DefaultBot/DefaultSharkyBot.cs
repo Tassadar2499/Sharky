@@ -32,6 +32,7 @@ using Sharky.Proxy;
 using Sharky.TypeData;
 using System.Collections.Generic;
 using System.Net.Http;
+using Sharky.Setup;
 
 namespace Sharky.DefaultBot
 {

@@ -1,6 +1,7 @@
 ﻿using SC2APIProtocol;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using Sharky.Setup;
 
 namespace Sharky.Managers
 {

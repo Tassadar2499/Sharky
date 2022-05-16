@@ -2,6 +2,7 @@
 using Sharky;
 using Sharky.DefaultBot;
 using System;
+using Sharky.Setup;
 
 namespace SharkyProtossExampleBot
 {

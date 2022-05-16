@@ -5,6 +5,7 @@ using SharkyProtossExampleBot;
 using SharkyTerranExampleBot;
 using SharkyZergExampleBot;
 using System;
+using Sharky.Setup;
 
 namespace SharkyRandomExampleBot
 {

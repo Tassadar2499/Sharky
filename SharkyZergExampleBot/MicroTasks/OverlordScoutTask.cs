@@ -35,7 +35,6 @@ namespace SharkyZergExampleBot.MicroTasks
             }
         }
 
-
         public override IEnumerable<SC2APIProtocol.Action> PerformActions(int frame)
         {
             var actions = new List<SC2APIProtocol.Action>();
@@ -45,21 +44,19 @@ namespace SharkyZergExampleBot.MicroTasks
             return actions;
         }
 
-        IEnumerable<SC2APIProtocol.Action> ScoutRandomBases(int frame)
+        private IEnumerable<SC2APIProtocol.Action> ScoutRandomBases(int frame)
         {
             var actions = new List<SC2APIProtocol.Action>();
 
             foreach (var commander in UnitCommanders)
             {
-                if (commander.UnitCalculation.Unit.Orders.Count() == 0)
-                {
-                    var randomBase = BaseData.BaseLocations[Random.Next(BaseData.BaseLocations.Count)];
+                if (commander.UnitCalculation.Unit.Orders.Any()) continue;
+                var randomBase = BaseData.BaseLocations[Random.Next(BaseData.BaseLocations.Count)];
 
-                    var action = commander.Order(frame, Abilities.MOVE, randomBase.MineralLineLocation);
-                    if (action != null)
-                    {
-                        actions.AddRange(action);
-                    }
+                var action = commander.Order(frame, Abilities.MOVE, randomBase.MineralLineLocation);
+                if (action != null)
+                {
+                    actions.AddRange(action);
                 }
             }
 

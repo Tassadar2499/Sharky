@@ -8,7 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using SC2APIProtocol;
 
-namespace Sharky
+namespace Sharky.Setup
 {
     public class GameConnection
     {

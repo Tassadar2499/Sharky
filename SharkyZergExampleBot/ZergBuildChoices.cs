@@ -48,9 +48,9 @@ namespace SharkyZergExampleBot
             AddZergTasks(defaultSharkyBot);
         }
 
-        void AddZergTasks(DefaultSharkyBot defaultSharkyBot)
+        private static void AddZergTasks(DefaultSharkyBot defaultSharkyBot)
         {
-            var overlordScoutTask = new OverlordScoutTask(defaultSharkyBot, 2, true);
+            var overlordScoutTask = new OverlordScoutTask(defaultSharkyBot, 2);
             defaultSharkyBot.MicroTaskData.MicroTasks[overlordScoutTask.GetType().Name] = overlordScoutTask;
         }
     }
